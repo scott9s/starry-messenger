@@ -1,0 +1,21 @@
+.footer-copyright {
+    color: aliceblue;
+}
+
+.nav-tabs {
+    border-block-end-style: inset;
+}
+
+/* custom feed class  styles */
+.feed, #favorites-cart {
+    font-kerning: normal;
+}
+
+.feed button {
+    margin-top: 1em;
+    margin-bottom: 1em;
+    padding-top: .5em;
+    padding-bottom: .5em;
+}
+
+/* custom favorites-cart styles */

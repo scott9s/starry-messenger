@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Starry Messenger - Home</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="The home page of the Starry Messenger Site">
+    <meta name="author" content="SS">
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+        crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="./scripts/pictureOfTheDay.js"></script>
+    <script src="./scripts/cart.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+        crossorigin="anonymous">
+    <link rel="stylesheet" href="./styles/style.css">
+</head>
+
+<body class="container">
+
+    <header class="row navigation">
+        <script src="./scripts/header.js"></script>
+    </header>
+
+    <article>
+        <div class="jumbotron shadow p-3 mb-5 rounded">
+            <h1 class="display-4">The Starry Messenger</h1>
+            <hr class="my-4">
+            <p class="lead">Welcome</p>
+            <hr class="my-4">
+            <p>The images on this site are sourced from NASA's APIs. Choose your favorites.</p>
+            <a class="btn btn-primary btn-lg" href="./favorites.html" role="button">Explore</a>
+        </div>
+
+        <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+            <ol class="carousel-indicators">
+                <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+            </ol>
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img class="d-block w-100" src="https://api.nasa.gov/images/apod.jpg" alt="gaze in wonder">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5>gaze in wonder</h5>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img class="d-block w-100" src="https://mars.nasa.gov/system/resources/detail_files/21929_PIA22486-web.jpg" alt="satisfy your curiousity">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5>satisfy your curiousity</h5>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img class="d-block w-100" src="https://images-assets.nasa.gov/image/GSFC_20171208_Archive_e001500/GSFC_20171208_Archive_e001500~thumb.jpg" alt="discover new perspectives">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5>discover new perspectives</h5>
+                    </div>
+                </div>
+            </div>
+            <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="sr-only">Previous</span>
+            </a>
+            <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="sr-only">Next</span>
+            </a>
+        </div>
+
+        <div class="row p-3">
+            <div class="col">
+                <h4>Picture of the day</h4>
+                <div class="feed">
+                    <br>
+                    <div class="media row">
+                        <img class="mr-3 col-lg-4" id="apod_img_id" style="max-width: 50%; height: auto;">
+                        <div class="media-body col-lg-8">
+                            <h5 class="mt-0 mb-1" id="apod_title"></h5>
+                            <button type="submit" class="btn btn-info" onclick="handleClick(this)">add to favorites</button>
+                            <p id="apod_explaination"></p>
+                            <p id="copyright"></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </article>
+
+    <footer class="row footer">
+        <script src="./scripts/footer.js"></script>
+    </footer>
+</body>
+
+</html>

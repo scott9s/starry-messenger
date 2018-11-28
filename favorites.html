@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Starry Messenger - Home</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="The favorites page of the Starry Messenger Site">
+    <meta name="author" content="SS">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="./scripts/cart.js"></script>
+    <script src="./scripts/download.js"></script>
+    <script src="./scripts/extractAndAppend.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+        crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU"
+        crossorigin="anonymous">
+    <link rel="stylesheet" href="./styles/style.css">
+</head>
+
+<body class="container">
+    <header class="row navigation">
+        <script src="./scripts/header.js" async></script>
+    </header>
+
+    <article class="row justify-content-md-center">
+        <div class="col">
+            <div class="card shadow p-3 mb-5 bg-white rounded">
+                <div class="card-body cart" id="favorites-cart">
+                    <h4 class="card-title">Save your favorites</h4>
+                    <p class="card-text">Like what you've found? Download your favorite images.</p>
+                    <h6 class="card-subtitle mb-2 text-muted">selected favorites</h6>
+                    <!-- display list of favorites here-->
+                    <ul class="favorites-cart"></ul>
+                    <script src="./scripts/browserWarning.js" async></script>
+                    <script>
+                        // ensure favorites selected on other pages are displayed.
+                        // load them from localStorage.favorites.
+                        loadCart();
+                    </script>
+                    <form class="p-2">
+                        <button type="button" class="btn btn-info" onclick="downloadFavorites(this)">
+                            <i class="fas fa-cloud-download-alt"></i> download
+                        </button>
+                    </form>
+                    <form class="p-2">
+                        <button type="button" class="btn btn-info" onclick="emptyCart(this)">
+                            <i class="fas fa-undo"></i> remove all
+                        </button>
+                    </form>
+                </div>
+            </div>
+            <!-- feed here, populated dynamically by scripts w-75 p-3 -->
+            <ul class="list col feed"></ul>
+            <script src="./scripts/extractHubble.js" defer></script>
+            <script src="./scripts/extractEarth.js" defer></script>
+            <script src="./scripts/extractMars.js" defer></script>
+        </div>
+    </article>
+
+    <footer class="row footer">
+        <script src="./scripts/footer.js" async></script>
+    </footer>
+</body>
+
+</html>
