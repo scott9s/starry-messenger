@@ -23,15 +23,13 @@ function downloadFavorites(elem) {
             let imageSrcUrl = $(this).attr("src");
             console.log(imageSrcUrl);
             if (imageSrcUrl) {
+                console.log("fetching image " + imageSrcUrl);
                 fetchImage(imageSrcUrl).then(
                     blob => download(blob, imageSrcUrl)
                 );
             }
         }
     );
-
-    // alert the user
-    alert("downloaded");
 
     // clean up cart and display success messages
     $(".cart ul li").detach();
@@ -41,6 +39,9 @@ function downloadFavorites(elem) {
 
     // empty local storage
     emptyCart();
+
+    // alert the user
+    alert("downloaded");
 }
 
 // downloads blob as file by creating an invisible <a> tag

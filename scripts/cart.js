@@ -76,6 +76,13 @@ function loadCart() {
     }
 }
 
+// 
+function handleRemoveAllClick() {
+    emptyCart();
+    // redraw the cart
+    location.reload();
+}
+
 // utility function to wrap content in media <li>
 function wrapMediaElement(contentToWrap) {
     return "<li class=\"media p-3 row\">" + contentToWrap + "</li>";
@@ -147,8 +154,6 @@ function emptyCart() {
     if (favorites) {
         console.log("clearing favorites from localStorage!")
         localStorage.setItem(favoritesKey, null);
-        // redraw the cart
-        //location.reload();
     }
     // otherwise, no work to do. log a warning.
     else {
