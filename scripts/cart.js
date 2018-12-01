@@ -147,6 +147,7 @@ function emptyCart() {
     if (favorites) {
         console.log("clearing favorites from localStorage!")
         localStorage.setItem(favoritesKey, null);
+        // redraw the cart
         //location.reload();
     }
     // otherwise, no work to do. log a warning.

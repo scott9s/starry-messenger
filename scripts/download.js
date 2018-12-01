@@ -34,7 +34,7 @@ function downloadFavorites(elem) {
     alert("downloaded");
 
     // clean up cart and display success messages
-    $(".cart ul").detach();
+    $(".cart ul li").detach();
     $(".cart h6").detach();
     $(".cart h4").text("Uploaded!");
     $(".cart p").text("Thanks for using Starry Messenger");
